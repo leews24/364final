@@ -8,7 +8,7 @@ They can also make a weather set based on all the locations that have already be
 
 ### **Documentation README Requirements**
 
-- [ ] **Create a `README.md` file for your app that includes the full list of requirements from this page. The ones you have completed should be bolded or checked off. (You bold things in Markdown by using two asterisks, like this: `This text would be bold and this text would not be`) and should include a 1-paragraph (brief OK) description of what your application does and have the routes **
+- [ ] **Create a `README.md` file for your app that includes the full list of requirements from this page. The ones you have completed should be bolded or checked off. (You bold things in Markdown by using two asterisks, like this: `This text would be bold and this text would not be`) and should include a 1-paragraph (brief OK) description of what your application does and have the routes**
 
 
 ### **Code Requirements**
