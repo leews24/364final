@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>
+Weather Search History
+</h1>
+
+<p>This search history logs ONLY searches made by users who are logged in.</p>
+
+{% for loc in locs %}
+<ul>
+  <li>{{loc}} - {{loc.users}}</li>
+</ul>
+{% endfor %}
+
+
+{% endblock %}

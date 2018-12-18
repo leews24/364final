@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>
+Anonymous Current Weather Search
+</h1>
+
+<ul>
+  <li>You may look up locations here. The current weather status will return.</li>
+  <li>You may save locations to your location set. Doing so will give you access to a 5 day forecast.</li>
+  <li>Searhing here will NOT log the search history. You MUST log in in order to save your searches to the search history.</li>
+</ul>
+
+<form action="{{ url_for('home') }}" method="POST">
+  {{ form.loc.label() }}{{ form.loc() }}<br>
+  {{ form.submit() }}
+  {{ form.hidden_tag() }}
+</form>
+
+{% if results == None %}
+
+{% else %}
+<ul>
+  <li>Location: {{ results['name'] }} <br> </li>
+  <li>Temperature(Kelvin): {{ results['main']['temp'] }} K<br> </li>
+  <li>Pressure: {{ results['main']['pressure'] }} hpa<br> </li>
+  <li>Humidity: {{ results['main']['humidity'] }} %<br> </li>
+</ul>
+{% endif %}
+
+{% endblock %}

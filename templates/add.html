@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>
+Give Location a Nickname
+</h1>
+
+<form action="" method="POST">
+  {{ form.nickname.label }} {{ form.nickname() }}<br>
+  {{ form.submit() }}
+  {{ form.hidden_tag() }}
+</form>
+
+
+{% endblock %}

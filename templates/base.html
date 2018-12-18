@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: gray;
+       color: white;
+       text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">
+      {% if current_user.is_authenticated %}
+        <a href="{{ url_for('logout') }}">Sign Out {{current_user.username}}</a>
+      {% else %}
+        <a href="{{ url_for('login') }}">Sign In</a>
+      {% endif %}
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('memberhome') }}">Member Home</a></li>
+            <li><a href="{{ url_for('searchhistory') }}">Search History</a></li>
+            <li><a href="{{ url_for('sets') }}">View All Sets</a></li>
+            <li><a href="{{ url_for('newset') }}">Create New Set</a></li>
+        </ul>
+    </div>
+    <div id="content">
+      {% block content1 %}
+
+      {% endblock %}
+    </div>
+
+    <div class="footer">
+      {% block footer %}
+      <p>This is Won Seok Lee's SI 364 Final Project.</p>
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

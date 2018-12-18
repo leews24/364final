@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>
+Create a New Weather Set
+</h1>
+
+<form action="" method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.name.label }} {{ form.name() }}<br>
+	{{ form.loc_picks.label }} {{ form.loc_picks() }}<br>
+	{{ form.submit() }}
+</form>
+
+{% endblock %}

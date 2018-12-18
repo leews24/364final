@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>
+Forecasts for Set {{ set.name }}
+</h1>
+
+<ul>
+{% for loc in locs %}
+<li>{{loc}} - {{rettemps[loc.zip]}}°F, {{retconds[loc.zip]}}
+</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>
+Weather Sets
+</h1>
+
+<ul>
+{% for s in sets %}
+    <li>
+      <a href="/set/{{ s.id }}">{{ s.name }}</a>
+      <form method="POST" action="/delete/{{ s.name }}">
+        {{ form.hidden_tag() }}
+        {{ form.submit() }}
+      </form>
+      <form method="POST" action="/nickname/{{ s.name }}">
+        {{ form2.hidden_tag() }}
+        {{ form2.submit() }}
+      </form>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
